@@ -3,7 +3,8 @@ import requests
 
 app = Flask(__name__)
 
-GROQ_KEY = "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"
+import os
+GROQ_KEY = os.environ.get("GROQ_KEY", "")
 MODEL = "llama-3.3-70b-versatile"
 
 @app.route('/')
